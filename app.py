@@ -9,8 +9,7 @@ CORS(app)
 # Load the Hugging Face model and processor
 model_name = "Salesforce/blip-image-captioning-base"
 processor = BlipProcessor.from_pretrained(model_name)
-processor.save_pretrained("/path/to/save/model")
-processor = BlipProcessor.from_pretrained("/path/to/save/model")
+model = BlipForConditionalGeneration.from_pretrained(model_name)
 
 # model = BlipForConditionalGeneration.from_pretrained(model_name)
 
